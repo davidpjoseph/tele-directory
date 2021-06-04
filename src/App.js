@@ -5,18 +5,16 @@ function App() {
   let subscribers = [
     {
       id: 1,
-      name: "Shilpa Bhat",
+      name: "David P Joseph",
       phone: "8888888888"
     },
     {
       id: 2,
-      name: "Srishti Gupta",
+      name: "Joseph P Varghese",
       phone: "9999999999"
     }
   ];
 
-  
-  
   return (
 
     <div className="component-container">
