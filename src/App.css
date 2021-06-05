@@ -14,7 +14,7 @@
 }
 
 .add-btn {
-    background: #7ab97a;
+    background: #8ae08a;
     color: #fff;
 }
 
@@ -39,6 +39,11 @@
 .name-heading, .phone-heading {
     font-size: 1rem;
     font-weight: 600;
-    color: #808080;
+    color: #6ea0eb;
     text-transform: uppercase;
 }
+
+.delete-btn {
+    background: #ee5a5a;
+    color: #000;
+} 
