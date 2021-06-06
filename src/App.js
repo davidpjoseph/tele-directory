@@ -1,25 +1,20 @@
-import Header from "./Header"
-import './App.css'
+import React, { Component } from 'react';
+import Header from './Header.js';
+import './App.css';
 
+class App extends Component {
 
-
-function App() {
-  let subscribers = [
-    {
-      id: 1,
-      name: "David P Joseph",
-      phone: "8888888888"
-    },
-    {
-      id: 2,
-      name: "Joseph P Varghese",
-      phone: "9999999999"
+  constructor() {
+    super();
+    this.state = {
+      subscribersListToShow: []
     }
-  ];
+  }
 
-  return (
-
-    <div className="component-container">
+  render() {
+    
+    return (
+      <div>
         <Header heading="Phone Directory" />
         <div className="component-body-container">
           <button className="custom-btn add-btn">Add</button>
@@ -30,24 +25,20 @@ function App() {
           </div>
 
           {
-            subscribers.map( sub => {
-              return(
-              <div  key={sub.id} className="grid-container">
-              <span className="grid-item">{sub.name}</span>
-              <span className="grid-item">{sub.phone}</span>
-              <span className="grid-item action-btn-container">
+            this.state.subscribersListToShow.map(sub => {
+              return <div key={sub.id} className="grid-container">
+                <span className="grid-item">{sub.name}</span>
+                <span className="grid-item">{sub.phone}</span>
+                <span className="grid-item action-btn-container">
                   <button className="custom-btn delete-btn">Delete</button>
-              </span>
+                </span>
               </div>
-              )
             })
           }
+        </div>
       </div>
-    </div>
-   
-   
-
-  );
+    );
+  }
 }
 
 export default App;
