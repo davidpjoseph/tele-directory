@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
-import './ShowSubscriber.css';
+import './ShowSubscribers.css';
+import { Link } from 'react-router-dom';
 
-class ShowSubscriber extends Component {
+class ShowSubscribers extends Component {
 
- render() {
-    
+  render() {
+
     return (
       <div>
         <Header heading="Phone Directory" />
         <div className="component-body-container">
-          <button className="custom-btn add-btn">Add</button>
+          <Link to="/add">
+            <button className="custom-btn add-btn">Add</button>
+          </Link>
 
           <div className="grid-container heading-container">
             <span className="grid-item name-heading">Name</span>
@@ -34,4 +37,4 @@ class ShowSubscriber extends Component {
   }
 }
 
-export default ShowSubscriber;
+export default ShowSubscribers;
